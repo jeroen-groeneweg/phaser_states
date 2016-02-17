@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <title>RGB - Arcade Game</title>
-        <meta name="description" content="">
+        <meta name="description" content="RetroGame Brothers - the Arcade Game">
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!-- build:css styles/vendor.css -->
@@ -23,25 +23,11 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-
-        <div class="container">
-            <header class="header">
-              <h3 class="text-muted">RetroGameBrothers</h3>
-                <h4>The Arcade Game</h4>
-            </header>
-
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-12">
-                  <div class="text-center" id="game-area"></div>
-                </div>
-              </div>
-            </div>
-            
-        </div>
-
+        <div class="text-center" id="game-area"></div>
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
+        <script src="scripts/models/player.js"></script>
+        <script src="scripts/models/level.js"></script>
         <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
         <!-- endbuild -->
 </body>

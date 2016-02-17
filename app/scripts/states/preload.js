@@ -5,8 +5,7 @@ define([], function() {
 
     Preload.prototype = {
         preload: function() {
-            // load all game assets
-            // images, spritesheets, atlases, audio etc..
+            console.log('preload');
         },
 
         create: function() {

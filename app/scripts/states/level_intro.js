@@ -8,6 +8,8 @@ define([], function() {
             this.levelData = levelData;
         },
         create: function() {
+            console.log('play level intro');
+
             var tweenIntro = this.tweenIntro();
 
             if (this.levelData.level === 1) {

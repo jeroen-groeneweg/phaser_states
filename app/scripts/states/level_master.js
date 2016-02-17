@@ -20,6 +20,7 @@ define([], function() {
         },
         
         create: function() {
+            console.log('load level data');
             this.decideLevelState();
         },
 
