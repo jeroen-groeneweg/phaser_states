@@ -17,25 +17,28 @@ define([], function() {
             level = new Level(this.game);
             player = new Player(this.game, 100, 100);
 
-            this.enterKey = this.game.input.keyboard
-                .addKey(Phaser.Keyboard.ENTER);
-
-            this.game.time.advancedTiming = true;
-
+            this.enterKey = this.game.input.keyboard.addKey(Phaser.Keyboard.ENTER);
             this.enterKey.onDown.add(this.roundEnd, this);
+
+            this.game.camera.follow(player.getPlayerSprite());
         },
 
         update: function()
         {
-            // Set collision for player and level
-            this.game.physics.arcade.collide(player.player, level.level);
+            // Check for collision between player and level
+            this.game.physics.arcade.collide(player.getPlayerSprite(), level.getLevelSprite());
+
+            // Update the player movement
+            player.update();
+        },
+
+        render: function()
+        {
+            // Show camera info
+            this.game.debug.cameraInfo(this.game.camera, 32, 32);
 
             // Show FPS
             this.game.debug.text(this.game.time.fps || '--', 2, 14, "#eeffee");
-
-            player.update();
-
-
         },
 
         roundEnd: function() {

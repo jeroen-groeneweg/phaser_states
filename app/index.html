@@ -9,14 +9,7 @@
         <meta name="description" content="RetroGame Brothers - the Arcade Game">
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <!-- build:css styles/vendor.css -->
-        <!-- bower:css -->
-        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-        <!-- endbower -->
-        <!-- endbuild -->
-        <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
-        <!-- endbuild -->
     </head>
     <body>
         <!--[if lt IE 10]>
@@ -25,10 +18,9 @@
 
         <div class="text-center" id="game-area"></div>
 
-        <!-- build:js({app,.tmp}) scripts/main.js -->
         <script src="scripts/models/player.js"></script>
         <script src="scripts/models/level.js"></script>
-        <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
-        <!-- endbuild -->
+        <script data-main="scripts/main" src="scripts/require.js"></script>
+
 </body>
 </html>
